@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinda Septiani | Portfolio Website</title>
+
+    <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg py-3" data-bs-theme="dark" style="background-color: rgb(40, 40, 40);">
+        <div class="container">
+            <a href="." class="navbar-brand fw-semibold text-white">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggler="toggler" data-bs-target="#togglerMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="ToggleMenu"></div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#Home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white"href="#Profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#Project">Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="jumbotron text-center">
+        <h1 class="display-10">Dinda Septiani</h1>
+        <p class="lead">Telecommunication Engineering Student</p>
+        <section class="Home" id="Home">
+        </section>
+
+        <section class="Profile" id="Profile">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <h1 class="header tittle text-white fw-normal mb-4">
+                            Profile
+                        </h1>
+                    </div>
+                    <div class="col-md-8">
+                        <img src="Images/11111.jpg" />
+                        <p class="mb-4 text-secondary">
+                            An active 7th semester student majoring in Electrical Engineering, D4 Telecommunications
+                            Engineering Study Program from Sriwijaya State Polytechnic who is able to think creatively
+                            and understand existing trends and can be responsible in carrying out his duties.
+                        </p>
+                        <a href="#contact" class="btn btn-primary py-2 px-5">My Resume</a>
+                        <div class="myresume"><html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Document</title>
+                        </head>
+                        <body>
+                            
+                        </body>
+                        </html></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section" id="Project">
+            <div class="container">
+                <p class="mb-0 text-secondary"></p>
+                <h2 class="section-title text-primary mb-4">Project</h2>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card bg-dark-alt border-0 mb-3">
+                            <div class="card-body p-6 p-md-4">
+                                <h4 class="text-white mb-2 mt-4">SOP PABX</h4>
+                                <img src="Images/pabx.jpg" />
+                                <p class="mb-0 text-secondary">
+                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-dark-alt border-0 mb-3">
+                            <div class="card-body p-6 p-md-4">
+                                <h4 class="text-white mb-2 mt-4">Demo GFSK</h4>
+                                <img src="Images/gfsk.jpg" />
+                                <p class="mb-0 text-secondary">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-dark-alt border-0 mb-3">
+                            <div class="card-body p-6 p-md-4">
+                                <h4 class="text-white mb-2 mt-4">Radio Mobile</h4>
+                                <img src="Images/2022-10-09 (1).png" />
+                                <p class="mb-0 text-secondary">
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Contact" id="Contact">
+            <div class="container">
+                <p class="mb-0 text-secondary"></p>
+                <h2 class="section-title text-primary mb-4 text-center">Contact Me</h2>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <form action="#" method="post">
+                            <input type="text" id="name" placeholder="Your Name"
+                                class="form-control bg-dark-alt border-dark shadow-none text-black mb-3">
+                            <textarea id="message" cols="30" rows="5" placeholder="Your Message"
+                                class="form-control bg-dark-alt border-dark shadow-none text-white mb-3"></textarea>
+                            <button class="btn btn-primary px-4 py2" type="button" onclick="SendMessage()">Send
+                                Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Created by <a href="https://www.linkedin.com/in/dindaseptiani" class="text-white fw-bold">Dinda Septiani</a></p>
+        </footer>
+
+        <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+        <script>
+            function SendMessage() {
+                var name = document.getElementById('name').value;
+                var message = document.getElementById('message').value;
+                var phoneNumber = "6282282892239";
+
+                var url = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text= Halo, my name" + name + ", " + message;
+
+                window.open(url);
+            }
+
+        </script>
+</body>
+
+</html>
